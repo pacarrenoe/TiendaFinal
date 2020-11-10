@@ -34,8 +34,11 @@
             <td> $ {{ p.preciop }} </td>
             <td> {{ p.descripcion }} </td>
             <td> 
+                <div class="float-right">
                 <a href="{% url 'usuario_modificar' p.codigoproducto %}"> Modificar </a>
                 <a href="#" onclick="confirmarEliminacion({{p.codigoproducto}})"> Eliminar </a>
+                </div>
+            
             </td>
         </tr>
 

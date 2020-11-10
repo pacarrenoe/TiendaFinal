@@ -10,14 +10,16 @@
 <br>
     <form action="" method="POST" class="espacio">
         {% csrf_token %}    
-        <table>
+        <table class="table table-striped">
 
             {{ form.as_table}} 
 
         </table>
         <br>
-        <input type="reset" value="Limpiar">
-        <input type="submit" value="Crear" >
+        <div class="float-right">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Crear" >
+        </div>
     </form>
 
     {{ mensaje }}

@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-  <body>
-    <h1> Inicio de sesión </h1>
-      <form action="" method="POST">
-          {% csrf_token %} 
-          <table>
-            {{ form.as_table }} 
-          </table>
+{% extends 'app/base.html' %}
 
-        <input type="submit" value="Login">
-        <a href="{% url 'home' %}"> Volver</a>
-      </form>  
-  </body>
-</html>
+{% load static %}
+
+{% block contenedor %}
+<header id="inicio">
+	<nav>
+		<h1> Inicio de sesión </h1> 
+    		<form action="" method="POST">
+      			{% csrf_token %} 
+      				<table>
+        				{{ form.as_table }} 
+      				</table>
+      			<div class="float-right">
+        			<input type="submit" value="Login">
+        			<a href="{% url 'home' %}"> Volver</a>
+      			</div>  
+        	</form> 
+	</nav>
+</header>
+
+{% endblock contenedor %}
