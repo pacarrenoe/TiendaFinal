@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="{% static 'app/img/icono.png' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'app/css/flexboxgrid.min.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+	<link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+	<link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}" >
+	<title>MP BURGUERS</title>
+</head>
+<body id="body">
+	<div class="container"> 
+		<div class="row">
+			<div class="col-xs-12" id="fondo">
+				<header >
+					<img src="{% static 'app/img/logo3.png' %}" >
+					<h1>MP BURGUERS</h1>
+					<nav>
+						<ul>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> HOME</a> </li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'menu' %}">  MENU</a></li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'pedido' %}">  PEDIDO</a> </li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'nosotros' %}">  NOSOTROS</a></li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario' %}">  USUARIO</a></li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+			<div class="col-xs-12">
+				{% block contenedor %}
+
+
+
+
+
+
+                
+                {% endblock contenedor %}
+			</div>	       
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="{% static 'app/js/carrusel.js' %}"></script>
+
+    <div class="container">
+        <div class="row">
+			<div class="col-xs-12" id="fondo" >
+                <footer class="info" >
+					<nav>
+					    <ul>
+							<li> 
+                 				<p>Av. Quellón 1522, Maipú - Chile</p> <p>MPBurguers@contacto.cl</p> <p>Despachos gratis dentro de Maipú</p>
+							</li>
+						
+						</ul>
+					</nav>
+                </footer>
+            </div>
+        </div>    
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+body{
+    background: -webkit-linear-gradient(to right, hsla(0, 0%, 35%, 0), rgba(102, 102, 102, 0)),url(../img/pizarra4.jpg);
+	background: linear-gradient(to right, hsla(0, 0%, 35%, 0), hsla(0, 0%, 35%, 0)),url(../img/pizarra4.jpg);
+}
+
+/* BASE ↓*/ 
+
+#fondo{
+    background: linear-gradient(to right, hsla(0, 0%, 35%, 0.562), hsla(0, 0%, 35%, 0.555)),url(../img/Fuego.jpg);
+}
+
+header{
+    font-family: 'open sans' ; 
+    float: inline-start;
+    color: ivory;
+}
+
+header > img{
+    width: 125px;
+    float: left;
+}
+
+header > h1{
+    float: left;
+    margin-top: 40px;
+    font-size: 50px;
+    text-shadow: 4px 4px rgb(131, 131, 131); 
+    margin-right: 30px; 
+}
+
+header > nav{
+    float: left;
+    margin-top: 45px;
+   
+    
+}
+
+header > nav > ul > li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
+ 
+header > nav > ul > li > a {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0.5px 1px rgb(131, 131, 131); 
+    color:white;
+    text-decoration: none;
+    font-style: oblique;
+}
+
+/* HOME */
+
+div{
+    float: center;
+}
+
+div > h1 {
+    color: white;
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+    font-size: 22px;
+}
+
+div > h2 {
+    color: white;
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+div > h2 > a{
+    color: white;
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS PAGINA CARRUSEL*/
+
+#contenido {
+    width: 80%;
+    margin:auto;
+    max-width: 1280px;
+    min-height: 100vh;
+}
+
+.contenedor {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: rgb(204, 26, 26);
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+/* CSS PIE*/
+
+footer {
+    font-family: 'open sans' ; 
+    float: center;  
+}
+
+footer > nav{
+    float: center;
+}
+
+footer > nav > ul > li {
+    float: center;
+    list-style: none;
+    padding: 10px;
+}
+
+footer >nav > ul > li > i {
+    float: center;
+    width: 35px;
+    
+}
+
+footer >nav > ul > li > p {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    text-decoration: none;
+    font-style: oblique;
+}
+
+
+
+
+/* CSS PAGINA MENÚ*/
+.hdrmenu {
+    font-family: 'open sans' ; 
+    text-align: center;
+   
+}
+.hdrmenu h1{
+    width: 100%;
+    font-size: 50px;
+    color:white;
+    text-shadow: 2px 4px rgb(66, 66, 66);
+    height: 100%;
+    padding: 5px /*↑*/ 15px /*→*/ 5px /*↓*/ 10px /*←*/;  
+    
+}
+.navmenu{
+    width: 100%;
+    height: 100%;
+    font: bold 20px verdana, sans-serif;
+    text-align: center;
+	padding:px /*↑*/ 25px /*→*/ 10px /*↓*/ 25px /*←*/;
+	background: -webkit-linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background: linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+}   
+.navmenu a{
+    color:white;
+    font-size: 25px;
+    text-decoration: none;
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    padding: 35px /*↑*/ 15px /*→*/ 15px /*↓*/ 10px /*←*/;     
+}
+.info{
+    color: white;
+    text-align: center;   
+}
+.info p{
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background: linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    padding: 10px /*↑*/ 15px /*→*/ 10px /*↓*/ 10px /*←*/;      
+}
+
+.menu1{
+    width: 100%;
+    height: 100%;
+    background: black;
+    background: -webkit-linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background: linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background-size: cover;
+    text-align: center;      
+}
+.menu1 h1{
+    font-size: 35px;
+    color:white;
+    text-align: center; 
+    text-shadow: 1px 2px rgb(0, 0, 0);    
+}
+.menu1 li{
+    color:white;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; 
+    margin: 20px;
+}
+
+.menupie{
+    width: 100%; 
+    height: 85%;
+    background: black;
+    background: -webkit-linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background: linear-gradient(to right, #2f2f336e, #1d1d1f6e),url(../img/Pizarra.jpg);
+    background-size: cover;
+    text-align: center;  
+    margin-top: 50PX;
+    font-family: 'Montserrat', sans-serif;      
+}
+.menupie h1{
+    font-size: 35px;
+    color:white;
+    text-align: center; 
+    text-shadow: 1px 2px rgb(0, 0, 0);    
+}
+.menupie p{
+    font-size: 20px;
+    color:white;
+    text-align: center; 
+    text-shadow: 1px 2px rgb(0, 0, 0); 
+    padding: 5px /*↑*/ 15px /*→*/ 15px /*↓*/ 10px /*←*/;   
+}
+
+.menupie a{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(194, 149, 149);
+    background: -webkit-linear-gradient(to right, hsla(0, 100%, 50%, 0.459), hsla(300, 0%, 40%, 0.664)),url(../img/Fuego.jpg);
+    background: linear-gradient(to right, hsla(0, 100%, 50%, 0.459), hsla(0, 0%, 35%, 0.459)),url(../img/Fuego.jpg);
+	width: 100px;
+	font-size: 25px;
+    text-align: center;
+    border-radius: 25px;
+	margin-top: 40px;
+	padding: 10px;
+    text-decoration: none;
+}
+
+.menupie img{
+
+    display: inline-block;
+    display:block;
+	margin:auto;
+	padding: 10px /*↑*/ 15px /*→*/ 15px /*↓*/ 10px /*←*/; 
+}
+
+
+/* BASE ↑*/ 

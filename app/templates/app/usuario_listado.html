@@ -1,0 +1,48 @@
+{% extends 'app/usuario.html' %}
+
+{% load static %}
+
+{% block javascript%}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{% static 'app/css/confirmacion.js' %}"></script>
+
+
+{% endblock%}
+
+
+
+{% block contenido %}
+<h1 id="titulo">Listado de productos</h1>
+<div id="contenido">
+
+<br>
+    <table>
+        <tr>
+            <th>Codigo  </th>
+            <th>| Nombre del producto  </th>
+            <th>| Precio del producto  </th>
+            <th>| Descripción  </th>
+            <th>| Opciones  </th>
+
+        </tr>
+
+        {% for p in productos %}
+
+        <tr>
+            <td> # {{ p.codigoproducto }} </td>
+            <td>   {{ p.nombrep }} </td>
+            <td> $ {{ p.preciop }} </td>
+            <td> {{ p.descripcion }} </td>
+            <td> 
+                <a href="{% url 'usuario_modificar' p.codigoproducto %}"> Modificar </a>
+                <a href="#" onclick="confirmarEliminacion({{p.codigoproducto}})"> Eliminar </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+        </table>
+    
+</div>
+
+{% endblock %}

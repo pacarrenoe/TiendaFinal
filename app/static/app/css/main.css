@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background: -webkit-linear-gradient(to right, hsla(0, 0%, 35%, 0), rgba(102, 102, 102, 0)),url(../img/pizarra4.jpg);
+  background: linear-gradient(to right, hsla(0, 0%, 35%, 0), hsla(0, 0%, 35%, 0)),url(../img/pizarra4.jpg);
+}
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to right, hsla(0, 0%, 35%, 0.562), hsla(0, 0%, 35%, 0.555)),url(../img/Fuego.jpg);
+  transition: all 200ms linear;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  color: rgba(255, 255, 255, 0.9);
+  list-style: none;
+  margin-top: 20px;  
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+#sidebar ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+
+.logo {
+  width: 75px;
+  display: block;
+  margin: 0 auto; 
+}
+
+div > ul > h1 {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#contenido{
+  margin-left:400px;
+  
+  
+}
+#titulo{
+  margin-left:200px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to right, hsla(0, 0%, 35%, 0.562), hsla(0, 0%, 35%, 0.555)),url(../img/Fuego.jpg);
+  
+}
+
+#contenido table tr th{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12;
+  font-family: 'open sans';
+  margin-left: 10px;
+  padding-left: 45px;
+ 
+  
+}
+
+#contenido table tr td{
+  color: rgba(255, 255, 255, 0.9);
+  text-align: right;
+  font-family: 'open sans';
+
+  
+}
+
+.espacio{
+  margin-left: 20px;
+
+}
+.wid{
+  width: 200px;
+  float: left;
+
+}
+
+

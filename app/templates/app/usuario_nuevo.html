@@ -1,0 +1,29 @@
+
+{% extends 'app/usuario.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<h1 id="titulo">Creacion de nuevos</h1>
+
+<div id="contenido">
+<br>
+    <form action="" method="POST" class="espacio">
+        {% csrf_token %}    
+        <table>
+
+            {{ form.as_table}} 
+
+        </table>
+        <br>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Crear" >
+    </form>
+
+    {{ mensaje }}
+    
+</div>
+
+{% endblock %}
+    
+

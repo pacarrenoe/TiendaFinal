@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="shortcut icon" href="{% static 'app/img/icono.png' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'app/css/flexboxgrid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}" >
+	<title>MP BURGUERS</title>
+</head>
+<body id="body">
+    <div id="sidebar">
+      <ul>
+          <img src="{% static 'app/img/logo3.png' %}" alt="Logo Fazt" class="logo">
+          <h1> Debes seleccionar una opción, para poder visualizar lo que necesitas</h1>
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> Cerrar sesión</a> </li>
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> Volver al home</a> </li>
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario_nuevo' %}"> Agregar  </a> </li>
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario_listado' %}"> Listar / Buscar </a> </li>
+
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href=""> Eliminar  </a> </li>
+      </ul>
+    </div>
+    <div>
+    {% block contenido %}
+
+
+                
+    {% endblock contenido %}
+    
+    
+    </div>
+
+
+</body>
+</html>
