@@ -5,15 +5,16 @@
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
   <body>
-    <h1> Inicio de sesión </h1>
+    <h1> Registro de usuario</h1>
       <form action="" method="POST">
           {% csrf_token %} 
           <table>
             {{ form.as_table }} 
           </table>
 
-        <input type="submit" value="Login">
-        <a href="{% url 'home' %}"> Volver</a>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Crear">
+        <a href="{% url 'home' %}"> Volver </a>
       </form>  
   </body>
 </html>
