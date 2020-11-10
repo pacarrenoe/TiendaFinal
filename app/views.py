@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import cliente, producto, pedido
 from .forms import productosForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -23,6 +24,8 @@ def pedidos(request):
 
     return render(request, 'app/pedido.html')
 
+
+@login_required
 def usuario(request):
 
     return render(request, 'app/usuario.html') 

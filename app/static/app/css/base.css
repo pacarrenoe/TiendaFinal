@@ -23,7 +23,7 @@ header > img{
 header > h1{
     float: left;
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 30PX;
     text-shadow: 4px 4px rgb(131, 131, 131); 
     margin-right: 30px; 
 }
@@ -42,7 +42,7 @@ header > nav > ul > li {
 }
  
 header > nav > ul > li > a {
-    font-size: 18px;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0.5px 1px rgb(131, 131, 131); 
     color:white;

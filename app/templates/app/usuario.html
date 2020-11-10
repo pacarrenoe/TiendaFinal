@@ -16,14 +16,16 @@
 <body id="body">
     <div id="sidebar">
       <ul>
-          <img src="{% static 'app/img/logo3.png' %}" alt="Logo Fazt" class="logo">
-          <h1> Debes seleccionar una opción, para poder visualizar lo que necesitas</h1>
-          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> Cerrar sesión</a> </li>
+        <img src="{% static 'app/img/logo3.png' %}" alt="Logo Fazt" class="logo">
+        <h1> Debes seleccionar una opción, para poder visualizar lo que necesitas</h1>
+        {% if user.is_authenticated %}
+		    <li> <a href="#">  USUARIO: {{user.username}} </a> </li>
+		    <li> <a href="{% url 'logout' %}">  CERRAR SESIÓN </a> </li>				
+            
+        {% endif %}
           <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> Volver al home</a> </li>
           <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario_nuevo' %}"> Agregar  </a> </li>
-          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario_listado' %}"> Listar / Buscar </a> </li>
-
-          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href=""> Eliminar  </a> </li>
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario_listado' %}"> Listado/Modificar/Eliminar</a> </li>
       </ul>
     </div>
     <div>

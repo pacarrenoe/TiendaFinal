@@ -25,8 +25,24 @@
 							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'home' %}"> HOME</a> </li>
 							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'menu' %}">  MENU</a></li>
 							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'pedido' %}">  PEDIDO</a> </li>
-							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'nosotros' %}">  NOSOTROS</a></li>
-							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario' %}">  USUARIO</a></li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'nosotros' %}">  NOSOTROS </a></li>
+							<li class="nav-item {% if request.path == '/' %} active {% endif %} "> <a href="{% url 'usuario' %}">  ADMIN</a></li>
+							{% if user.is_authenticated %}
+							<li>
+								<a href="#">  USUARIO: {{user.username}} </a>
+							</li>
+							<li>
+								<a href="{% url 'logout' %}">  CERRAR SESIÓN </a>
+							
+							</li>
+							{% else %}
+							<li>
+								<a href="{% url 'login' %}">  INICIAR SESION </a>
+							
+							</li>
+
+							{% endif %}
+
 						</ul>
 					</nav>
 				</header>

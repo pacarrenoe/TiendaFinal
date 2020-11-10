@@ -1,8 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 from .views import home, menu, nosotros, pedidos, usuario, usuario_listado, usuario_nuevo, usuario_modificar, usuario_eliminar
 
 urlpatterns = [
     path('', home, name="home"),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('menu/', menu, name="menu"),
     path('nosotros/', nosotros, name="nosotros"),
     path('pedido/', pedidos, name="pedido"),
