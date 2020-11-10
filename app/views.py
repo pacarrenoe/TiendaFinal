@@ -5,8 +5,11 @@ from .forms import productosForm
 # Create your views here.
 
 def home(request):
+    data = {
+        'productos': producto.objects.all()
+    }
 
-    return render(request, 'app/home.html')
+    return render(request, 'app/home.html', data)
 
 def menu(request):
 
@@ -38,7 +41,7 @@ def usuario_nuevo(request):
     }
 
     if request.method =='POST':
-        formulario = productosForm(request.POST)
+        formulario = productosForm(request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             data['mensaje'] = "Se ha creado un nuevo producto"
@@ -52,11 +55,11 @@ def usuario_modificar(request, codigoproducto):
     }
 
     if request.method =='POST':
-        formulario = productosForm(data=request.POST, instance=producto)
+        formulario = productosForm(data=request.POST, instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             data['mensaje'] = "Se ha modificado el producto"
-            data['form'] = formulario
+            data['form'] = productosForm(instance=productos.objects.get(codigoproducto=codigoproducto))
 
     return render(request, 'app/usuario_modificar.html', data) 
 

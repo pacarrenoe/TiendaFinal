@@ -15,43 +15,15 @@
 								<i class="fas fa-chevron-left"></i>
 							</button>
 							<div class="carousel__lista">
+								{% for p in productos %}
+
 								<div class="carousel__elemento">
-									<img src="{% static 'app/img/10.jpg' %}" alt="Hamburguesa 1">
-									
+									{% if p.imagen %}
+									<img src="{{ p.imagen.url }}" alt="Hamburguesa 1">
+									{% endif%}
 								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/12.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/3.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/4.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-				
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/5.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/14.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/7.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/8.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
-								<div class="carousel__elemento">
-									<img src="{% static 'app/img/11.jpg' %}" alt="Hamburguesa 1">
-									
-								</div>
+								
+								{% endfor %}
 							</div>
 			
 							<button aria-label="Siguiente" class="carousel__siguiente">
